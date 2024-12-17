@@ -1,0 +1,24 @@
+{% block pagename %}
+{% endblock %}
+
+{% block menu %}
+    <a href="/"><h3>Главная</h3></a>
+    <br>
+    <a href="/game"><h3>Игры</h3></a>
+    <br>
+    <a href="/basket"><h3>Корзина</h3></a>
+    <br>
+    <br>
+{% endblock %}
+
+
+{% block content %}
+    {% for game in games %}
+        <a href="#">
+            <h3 style="display:inline;">{{ game.title }}</h3>
+        </a>
+        <button style="display:inline;">Купить</button>
+    <br>
+    <br>
+    {% endfor %}
+{% endblock %}
